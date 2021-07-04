@@ -1,12 +1,14 @@
-# 버그 리스트 프로그램
-print("-- Bug List --")
-print("-- <q:quit> --")
-text = []
-c = 0
-while True:
-    c += 1
-    text = input(f"{c}. ")
-    if text.find('q')==0:
-        print("-> (QUIT) <-")
-        break
-
+import sys
+def Write():
+    i = 0
+    while True:
+        i += 1
+        text = input("%d: "%i)
+        if text == "q":
+            print("-> QUIT <-")
+            sys.exit(0)
+def Print():
+    print("-- Bug list --")
+    print("-- <q:quit> --")
+    Write()
+Print()
