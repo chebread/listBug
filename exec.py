@@ -1,14 +1,14 @@
-import sys
+from clint.textui import *
+
 def Write():
     i = 0
     while True:
         i += 1
-        text = input("%d: "%i)
+        text = input(colored.cyan("%d: "%i))
         if text == "q":
-            print("-> QUIT <-")
-            sys.exit(0)
+             sys.exit(0)
 def Print():
-    print("-- Bug list --")
-    print("-- <q:quit> --")
+    print(colored.cyan("-- Bug list --"))
+    print(colored.cyan("-- ") + colored.red("<q:quit>") + colored.cyan(" --"))
     Write()
 Print()
